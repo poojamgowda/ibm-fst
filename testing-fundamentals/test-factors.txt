@@ -1,0 +1,53 @@
+#############################################################
+# Paste test factors here.
+# Check the documents for more details.
+# https://github.com/Microsoft/pict/blob/master/doc/pict.md
+#############################################################
+
+
+From:          BLR,HYD,DEL,KOL,GOA
+To:            BLR,HYD,DEL,KOL,GOA
+Type:          RC,BC
+Fare:          4000,8000,12000,18000
+Airline:       Indigo,Vist
+Availability:  Available, No Flights 
+
+if [Fare] <12000 then [Airline] = "Indigo" else   [Airline] = "Vist" ;
+
+if [Fare] >12000 then [Type] = "BC" else [Type]="RC";
+
+if [From] = [To] then [Availability] = "No Flights" else [Availability] = "Available" ;
+
+
+
+From	To	Type	Fare	Airline	Availability
+KOL	KOL	RC	12000	Vist	No Flights
+DEL	BLR	RC	4000	Indigo	Available
+HYD	KOL	BC	18000	Vist	Available
+BLR	BLR	RC	8000	Indigo	No Flights
+GOA	DEL	RC	8000	Indigo	Available
+GOA	BLR	RC	12000	Vist	Available
+DEL	HYD	BC	18000	Vist	Available
+HYD	HYD	RC	4000	Indigo	No Flights
+DEL	GOA	RC	8000	Indigo	Available
+DEL	DEL	RC	12000	Vist	No Flights
+BLR	KOL	RC	12000	Vist	Available
+GOA	HYD	RC	4000	Indigo	Available
+BLR	DEL	RC	4000	Indigo	Available
+BLR	HYD	RC	12000	Vist	Available
+KOL	GOA	BC	18000	Vist	Available
+KOL	HYD	RC	8000	Indigo	Available
+HYD	BLR	RC	8000	Indigo	Available
+HYD	GOA	RC	12000	Vist	Available
+KOL	BLR	RC	4000	Indigo	Available
+GOA	GOA	RC	4000	Indigo	No Flights
+KOL	DEL	BC	18000	Vist	Available
+BLR	GOA	RC	4000	Indigo	Available
+DEL	KOL	RC	8000	Indigo	Available
+KOL	KOL	RC	4000	Indigo	No Flights
+BLR	BLR	BC	18000	Vist	No Flights
+GOA	KOL	RC	4000	Indigo	Available
+GOA	GOA	BC	18000	Vist	No Flights
+HYD	DEL	RC	8000	Indigo	Available
+
+
