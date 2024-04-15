@@ -1,0 +1,31 @@
+Action1: Rock, Paper, Scissor
+Action2: Rock, Paper, Scissor
+Winner: Tie, Rock, Paper, Scissor
+
+
+if [Action1] = [Action2] then [Winner] = "Tie";
+
+if [Action2] = "Rock" and [Action1] = "Scissor" then [Winner] = "Rock";
+
+if [Action2] = "Paper" and [Action1] = "Scissor" then [Winner] = "Scissor";
+
+if [Action2] = "Paper" and [Action1] = "Rock" then [Winner] = "Paper";
+
+if [Action2] = "Scissor" and [Action1] = "Rock" then [Winner] = "Rock";
+
+if [Action2] = "Scissor" and [Action1] = "Paper" then [Winner] = "Scissor";
+
+if [Action2] = "Rock" and [Action1] = "Paper" then [Winner] = "Paper";
+
+
+
+Action1	Action2	Winner
+Rock	Rock	Tie
+Paper	Scissor	Scissor
+Scissor	Rock	Rock
+Scissor	Scissor	Tie
+Paper	Rock	Paper
+Scissor	Paper	Scissor
+Rock	Paper	Paper
+Rock	Scissor	Rock
+Paper	Paper	Tie
