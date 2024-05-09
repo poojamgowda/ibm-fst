@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >-->
+<!--<suite name="softwaretestingmaterial">-->
+<!--    <test name="All test case">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="HeaderTests" />-->
+<!--                <include name="ButtonTests" />-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--                <class name="testNG04"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Only header">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="HeaderTests" />-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="testNG04"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Only Button">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="ButtonTests" />-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="testNG04"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Exclude header">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <exclude name="HeaderTests" />-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="testNG04"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Only header">-->
+<!--            <classes>-->
+<!--                <class name="testNG05"/>-->
+<!--            </classes>-->
+<!--        </test> -->
+<!--    <test name="Login">-->
+<!--        -->
+
+<!--        <classes>-->
+<!--                <class name="testNG06"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+<!--    <test name="Login">-->
+<!--        <classes>-->
+<!--                <class name="testNG09"/>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--</suite>-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" parallel="classes">
+    <test thread-count="2" name="Tests">
+        <parameter name="sUsername" value="admin"/>
+        <parameter name="sPassword" value="password"/>
+        <classes>
+            <class name="testNG01"/>
+            <class name="testNG02"/>
+            <class name="testNG03"/>
+            <class name="testNG04"/>
+            <class name="testNG05"/>
+            <class name="testNG06"/>
+            <class name="testNG07"/>
+            <class name="testNG08"/>
+        </classes>
+    </test>
+</suite>
